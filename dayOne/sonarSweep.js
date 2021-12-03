@@ -1,6 +1,6 @@
 function readInputs() {
     var fs = require('fs');
-    var contents = fs.readFileSync('C:\\Users\\matth\\Documents\\PROJECTS\\js projects\\adventOfCode2021\\dayOneSonarSweep\\inputs.txt', 'utf8');
+    var contents = fs.readFileSync('dayOne\\inputs.txt', 'utf8');
     var inputs = contents.split('\n').map(x => parseInt(x));
     return inputs;
 }
