@@ -122,15 +122,10 @@ function dayTen() {
                 let score = 0;
                 newOpening.split('').forEach((opening) => {
                     score *= 5;
-                    if(opening == '>') {
-                        score += 4;
-                    } else if(opening == '}') {
-                        score += 3;
-                    } else if(opening == ']') {
-                        score += 2;
-                    } else if(opening == ')') {
-                        score += 1;
-                    }
+                    if(opening == '>') score += 4;
+                    if(opening == '}') score += 3;
+                    if(opening == ']') score += 2;
+                    if(opening == ')') score += 1;
                 });
                 scores.push(score);
             }
@@ -138,15 +133,10 @@ function dayTen() {
     });
 
     console.log("illegal chars score: " + illegalChars.map((x) => {
-        if (x == '>') {
-            return 25137;
-        } else if (x == '}') {
-            return 1197;
-        } else if (x == ']') {
-            return 57;
-        } else if (x == ')') {
-            return 3;
-        }
+        if (x == '>') return 25137;
+        if (x == '}') return 1197;
+        if (x == ']') return 57;
+        if (x == ')') return 3;
     }).reduce((a, b) => a + b));
 
     scores.sort((a, b) => a-b);
